@@ -1,0 +1,5 @@
+Read about DOM=> Document Object Model
+
+width = +svg.attr("width"),
+
+svg.append("g")

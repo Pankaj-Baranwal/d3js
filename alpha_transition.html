@@ -20,9 +20,13 @@ text {
 
 </style>
 <svg width="960" height="500"></svg>
-<script src="d3.min.js"></script>
+<script src="d3.min.js">
+  // Tutorial by Mike Bostock (General Update Pattern III)
+  // http://bl.ocks.org/mbostock/3808234
+</script>
 <script>
 
+// splits "..." into each letter. Therefore alphabet is an array of 26 characters
 var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 var svg = d3.select("svg"),
