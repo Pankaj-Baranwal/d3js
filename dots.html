@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+
+<svg width="720" height="120">
+  <circle cx="40" cy="60" r="10"></circle>
+  <circle cx="80" cy="60" r="10"></circle>
+  <circle cx="120" cy="60" r="10"></circle>
+</svg>
+<script src="d3.min.js">
+</script>
+<script>
+	// select all circle tags
+	var circle = d3.selectAll("circle");
+	// print info about circle variable in console of browser
+	console.log(circle);
+	// this is css using js
+	circle.style("fill", "steelblue");
+	// set radius
+	circle.attr("r", 30);
+	// set x coord of center as a random position within max width(720)
+	circle.attr("cx", function(){
+		return Math.random()*720
+	});
+	circle.data([32, 57, 112]);
+	circle.attr("r", function(d){
+		return Math.sqrt(d);
+	});
+	circle.attr("cx", function(d, i){
+		return i * 100 + 30;
+	});
+</script>
